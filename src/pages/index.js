@@ -11,6 +11,7 @@ const PageWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Courier New", Courier, monospace;
 `;
 
 const NavigationBar = styled.div``;
@@ -34,6 +35,7 @@ const MusicWrapper = styled.div``;
 const A = styled.a`
   text-decoration: none;
   font-size: 70px;
+  color: black;
 `;
 
 const IndexPage = () => {
@@ -88,7 +90,7 @@ const IndexPage = () => {
             <H2>What I'm Listening To</H2>
           </MusicWrapper> */}
           <H1>
-            <A href="https://github.com/jamieguerrero">✌🏼</A>
+            <A href="https://github.com/jamieguerrero">brb ✌🏼</A>
           </H1>
         </PageWrapper>
       </Grid>
