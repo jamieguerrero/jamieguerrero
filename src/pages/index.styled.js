@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Grid = styled.div`
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-auto-rows: max-content;
 
@@ -16,7 +16,7 @@ const Grid = styled.div`
   }
   @media (min-width: ${({ theme }) => `${theme.breakpoints.DesktopHD}px`}) {
     grid-column-gap: ${({ theme }) => `${theme.grid.gutter.DesktopHD}px`};
-  }
+  } */
 `;
 
 export default Grid;
