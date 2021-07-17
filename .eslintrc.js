@@ -11,6 +11,9 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["react"],
-  rules: {},
-  extends: ["plugin:react/recommended", "airbnb", "prettier"],
+  rules: {
+    "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
+    "import/prefer-default-export": 1,
+  },
+  extends: ["plugin:react/recommended", "airbnb", "prettier", "react-app"],
 };

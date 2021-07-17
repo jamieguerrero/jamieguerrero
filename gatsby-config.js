@@ -1,16 +1,21 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://www.jamieguerrero.com",
     title: "jamieguerrero",
   },
   plugins: [
     {
       resolve: "gatsby-source-datocms",
       options: {
-        apiToken: "76ee529e1d9c07f74e23dd26362741",
+        apiToken: process.env.GATSBY_API_TOKEN,
       },
     },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-gatsby-cloud",
+    `gatsby-plugin-react-helmet`,
   ],
 };

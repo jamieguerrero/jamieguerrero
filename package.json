@@ -17,18 +17,23 @@
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.13.1",
+    "dotenv": "^8.6.0",
     "gatsby": "^3.8.1",
     "gatsby-plugin-gatsby-cloud": "^2.8.1",
+    "gatsby-plugin-react-helmet": "^4.9.0",
     "gatsby-plugin-styled-components": "^4.8.0",
     "gatsby-source-datocms": "^2.6.16",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
     "styled-components": "^5.3.0"
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "eslint": "^7.30.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react-app": "^6.0.0",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.24.0",
