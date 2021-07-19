@@ -1,42 +1,26 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
-import styled, { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
+import Footer from "../components/Footer";
 import theme from "../theme";
 import GlobalStyle from "../theme/GlobalStyle";
-import Grid from "./index.styled";
-
-const PageWrapper = styled.div`
-  min-height: 100vh;
-  min-width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Courier New", Courier, monospace;
-`;
-
-const NavigationBar = styled.div``;
-const H1 = styled.h1``;
-const H2 = styled.h2``;
-
-const Menu = styled.ul``;
-const MenuItem = styled.li``;
-const Link = styled.a``;
-
-const CodeWrapper = styled.div``;
-
-const Project = styled.div``;
-const ProjectTitle = styled.p``;
-const ProjectDescription = styled.p``;
-const ProjectTechnologies = styled.p``;
-
-const AnimationWrapper = styled.div``;
-const MusicWrapper = styled.div``;
-
-const A = styled.a`
-  text-decoration: none;
-  font-size: 70px;
-  color: black;
-`;
+import {
+  Grid,
+  PageWrapper,
+  NavigationBar,
+  H1,
+  H2,
+  Menu,
+  MenuItem,
+  Link,
+  CodeWrapper,
+  Project,
+  ProjectTitle,
+  ProjectDescription,
+  ProjectTechnologies,
+  AnimationWrapper,
+  MusicWrapper,
+} from "./index.styled";
 
 const IndexPage = () => {
   const titles = ["Hi, I'm Jamie Guerrero ✌🏼", "It's nice to meet you!"];
@@ -55,8 +39,8 @@ const IndexPage = () => {
       </Helmet>
       <Grid>
         <PageWrapper>
-          {/* <NavigationBar>
-            <H1>Jamie Guerrero</H1>
+          <NavigationBar>
+            <H1>JAMIE GUERRERO</H1>
             <Menu>
               <MenuItem>
                 <Link href="#code">code</Link>
@@ -88,11 +72,9 @@ const IndexPage = () => {
           </AnimationWrapper>
           <MusicWrapper id="music">
             <H2>What I'm Listening To</H2>
-          </MusicWrapper> */}
-          <H1>
-            <A href="https://github.com/jamieguerrero">brb ✌🏼</A>
-          </H1>
+          </MusicWrapper>
         </PageWrapper>
+        <Footer />
       </Grid>
     </ThemeProvider>
   );
