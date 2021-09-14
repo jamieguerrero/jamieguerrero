@@ -13,6 +13,11 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: 'HKGrotesk-SemiBold';
     letter-spacing: .56px;
+    font-size: 16px;
+
+    @media (min-width: ${({ theme }) => `${theme.breakpoints.Tablet}px`}) {
+      font-size: 18px;
+    }
   }
 `;
 

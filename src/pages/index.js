@@ -1,83 +1,67 @@
-import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
-import { ThemeProvider } from "styled-components";
-import Footer from "../components/Footer";
-import theme from "../theme";
-import GlobalStyle from "../theme/GlobalStyle";
+import React from "react";
+import { PageWrapper } from "../components/PageWrapper";
 import {
-  Grid,
-  PageWrapper,
-  NavigationBar,
-  H1,
   H2,
-  Menu,
-  MenuItem,
-  Link,
+  CodeCircleDiv,
+  MusicCircleDiv,
   CodeWrapper,
   Project,
   ProjectTitle,
   ProjectDescription,
   ProjectTechnologies,
-  AnimationWrapper,
   MusicWrapper,
-} from "./index.styled";
+  CodeProjectWrapper,
+  MusicProjectWrapper,
+  Jamie,
+} from "../styles/index.styled";
 
-const IndexPage = () => {
-  const titles = ["Hi, I'm Jamie Guerrero ✌🏼", "It's nice to meet you!"];
-  const [titleIndex, setTitleIndex] = useState(0);
-  useEffect(() => {
-    setTimeout(() => setTitleIndex((i) => (i === 0 ? 1 : 0)), 3000);
-  }, [titleIndex]);
-
-  return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>{titles[titleIndex]}</title>
-        <link rel="canonical" href="http://www.jamieguerrero.com" />
-      </Helmet>
-      <Grid>
-        <PageWrapper>
-          <NavigationBar>
-            <H1>JAMIE GUERRERO</H1>
-            <Menu>
-              <MenuItem>
-                <Link href="#code">code</Link>
-              </MenuItem>
-              <MenuItem>
-                <Link href="#animation">animation</Link>
-              </MenuItem>
-              <MenuItem>
-                <Link href="#music">music</Link>
-              </MenuItem>
-            </Menu>
-          </NavigationBar>
-          <CodeWrapper id="code">
-            <H2>Projects</H2>
-            <Project>
-              <ProjectTitle>jamieguerreroportfolio</ProjectTitle>
-              <ProjectDescription>
-                Website I built for myself 👌🏽
-              </ProjectDescription>
-              <ProjectTechnologies>
-                Gatsby, React, ThreeJS, GSAP, Netlify
-              </ProjectTechnologies>
-            </Project>
-            <Project />
-            <Project />
-          </CodeWrapper>
-          <AnimationWrapper id="animation">
-            <H2>My Doodles</H2>
-          </AnimationWrapper>
-          <MusicWrapper id="music">
-            <H2>What I'm Listening To</H2>
-          </MusicWrapper>
-        </PageWrapper>
-        <Footer />
-      </Grid>
-    </ThemeProvider>
-  );
-};
+const IndexPage = () => (
+  <PageWrapper>
+    {/* <Jamie /> */}
+    <CodeWrapper id="code">
+      <CodeCircleDiv />
+      <CodeProjectWrapper>
+        <H2>Latest Projects</H2>
+        <Project>
+          <ProjectTitle>jamieguerreroportfolio</ProjectTitle>
+          <ProjectDescription>Website I built for myself 👌🏽</ProjectDescription>
+          <ProjectTechnologies>
+            Gatsby, React, ThreeJS, GSAP, Netlify
+          </ProjectTechnologies>
+        </Project>
+        <Project>
+          <ProjectTitle>Project 2</ProjectTitle>
+          <ProjectDescription>Website I built for myself 👌🏽</ProjectDescription>
+          <ProjectTechnologies>
+            Gatsby, React, ThreeJS, GSAP, Netlify
+          </ProjectTechnologies>
+        </Project>
+        <Project>
+          <ProjectTitle>Project 3</ProjectTitle>
+          <ProjectDescription>Website I built for myself 👌🏽</ProjectDescription>
+          <ProjectTechnologies>
+            Gatsby, React, ThreeJS, GSAP, Netlify
+          </ProjectTechnologies>
+        </Project>
+      </CodeProjectWrapper>
+      <Project />
+      <Project />
+    </CodeWrapper>
+    <MusicWrapper id="music">
+      <MusicProjectWrapper>
+        <H2>What I'm Listening To</H2>
+        beat tapes
+        https://open.spotify.com/playlist/7Fil9eRQDLT8aiFvqrjiur?si=edd80eeca11d4403
+        feel these ones in my heart
+        https://open.spotify.com/playlist/3tkCuefAHyEC1HJv8ZX9Yk?si=796be0ecee25421d
+        🗣 cover these
+        https://open.spotify.com/playlist/2sPVqA5fBCcHjPgSxoWRXS?si=7364362fbc614efe
+        bluffs ting
+        https://open.spotify.com/playlist/66KQJb6pC49SOZ1oAW7oOX?si=1140bb79ed6841eb
+      </MusicProjectWrapper>
+      <MusicCircleDiv />
+    </MusicWrapper>
+  </PageWrapper>
+);
 
 export default IndexPage;

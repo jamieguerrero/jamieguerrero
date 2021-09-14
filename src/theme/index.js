@@ -7,6 +7,7 @@ const typography = {
     line-height: 1;
     letter-spacing: 1.71px;
     text-transform: uppercase;
+    white-space: pre;
   `,
   H2: css`
     font-family: "Rubik-Bold";
@@ -14,56 +15,45 @@ const typography = {
     line-height: 1;
     letter-spacing: 1px;
     text-transform: uppercase;
+    white-space: pre;
   `,
   H3: css`
     font-family: "Rubik-SemiBold";
-    font-size: 18px;
+    font-size: 1rem;
     line-height: 1;
     letter-spacing: 0.86px;
     text-transform: uppercase;
-  `,
-  H4: css`
-    font-family: "Rubik-SemiBold";
-    font-size: 12px;
-    line-height: 1;
-    letter-spacing: 0.67px;
-    text-transform: uppercase;
-  `,
-  H5: css`
-    font-family: "Rubik-SemiBold";
-    font-size: 36px;
-    line-height: 1;
-    letter-spacing: 0.57px;
-    text-transform: uppercase;
+    white-space: pre;
   `,
   ExtraBold: css`
     font-family: "Rubik-ExtraBold";
-    font-size: 14px;
+    font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0.67px;
     text-transform: uppercase;
+    white-space: pre;
   `,
   Body: css`
     font-family: "HKGrotesk-SemiBold";
-    font-size: 14px;
+    font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0.56px;
   `,
   Strong: css`
     font-family: "HKGrotesk-Black";
-    font-size: 14px;
+    font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0.56px;
   `,
   StrongItalic: css`
     font-family: "HKGrotesk-BoldItalic";
-    font-size: 14px;
+    font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0.56px;
   `,
   Italic: css`
     font-family: "HKGrotesk-SemiBoldItalic";
-    font-size: 14px;
+    font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0.56px;
   `,

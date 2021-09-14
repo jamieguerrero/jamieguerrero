@@ -2,17 +2,29 @@ import React from "react";
 import styled from "styled-components";
 
 const FooterWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   grid-column: -1/1;
   height: 30rem;
+  background-color: grey;
+  color: white;
 `;
 
-const Socials = styled.ul``;
-const SocialItem = styled.li``;
+const Socials = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+`;
+const SocialItem = styled.li`
+  list-style: none;
+`;
 const Link = styled.a``;
 
 const MadeWithLove = styled.p``;
 
-function Footer() {
+export default function Footer() {
   return (
     <FooterWrapper>
       <Socials>
@@ -36,5 +48,3 @@ function Footer() {
     </FooterWrapper>
   );
 }
-
-export default Footer;
