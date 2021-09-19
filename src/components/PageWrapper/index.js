@@ -5,7 +5,6 @@ import theme from "../../theme";
 import Head from "../Head";
 import { Grid } from "../../styles/index.styled";
 import Navigation from "../Navigation";
-import Footer from "../Footer";
 import GlobalStyle from "../../theme/GlobalStyle";
 
 export const InnerPageWrapper = styled.div`
@@ -21,7 +20,6 @@ export const PageWrapper = ({ children }) => (
         <Navigation />
         {children}
       </InnerPageWrapper>
-      <Footer />
     </Grid>
   </ThemeProvider>
 );

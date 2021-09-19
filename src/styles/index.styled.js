@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Canvas } from "@react-three/fiber";
 
 export const Grid = styled.div`
   display: grid;
@@ -88,87 +87,6 @@ export const Marquee = styled.p`
   }
 `;
 
-// ========================= Code Section =========================
-
-export const CodeWrapper = styled.div`
-  display: grid;
-  margin: 5em 0;
-  grid-template-columns: repeat(10, 1fr);
-
-  @media (min-width: ${({ theme }) => `${theme.breakpoints.Tablet}px`}) {
-    margin: 15em 0;
-    flex-direction: row;
-  }
-`;
-
-export const CodeCircleDiv = styled.div`
-  margin: 0 auto;
-  border-radius: 50%;
-  height: 300px;
-  width: 300px;
-  background-color: grey;
-  grid-column: -1/1;
-
-  @media (min-width: ${({ theme }) => `${theme.breakpoints.Tablet}px`}) {
-    grid-column: 1/6;
-  }
-`;
-
-export const CodeProjectWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  grid-column: -1/1;
-
-  @media (min-width: ${({ theme }) => `${theme.breakpoints.Tablet}px`}) {
-    grid-column: 6/11;
-  }
-`;
-
-export const Project = styled.div``;
-export const ProjectTitle = styled.p``;
-export const ProjectDescription = styled.p``;
-export const ProjectTechnologies = styled.p``;
-
-// ========================= Animation Section =========================
-
-export const AnimationWrapper = styled.div`
-  display: grid;
-  margin: 5em 0;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-areas: "a" / "b";
-  grid-column: -1/1;
-
-  @media (min-width: ${({ theme }) => `${theme.breakpoints.Tablet}px`}) {
-    grid-column: 6/11;
-    margin: 15em 0;
-    flex-direction: row;
-  }
-`;
-
-export const AnimationCircleDiv = styled.div`
-  margin: 0 auto;
-  border-radius: 50%;
-  height: 300px;
-  width: 300px;
-  background-color: grey;
-  grid-column: -1/1;
-  grid-area: a;
-
-  @media (min-width: ${({ theme }) => `${theme.breakpoints.Tablet}px`}) {
-    grid-column: 6/11;
-  }
-`;
-
-export const AnimationProjectWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  grid-column: -1/1;
-
-  @media (min-width: ${({ theme }) => `${theme.breakpoints.Tablet}px`}) {
-    grid-column: 1/6;
-  }
-`;
-
 // ========================= Music Section =========================
 
 export const MusicWrapper = styled.div`
@@ -184,19 +102,6 @@ export const MusicWrapper = styled.div`
   }
 `;
 
-export const MusicCircleDiv = styled.div`
-  margin: 0 auto;
-  border-radius: 50%;
-  height: 300px;
-  width: 300px;
-  background-color: grey;
-  grid-column: -1/1;
-
-  @media (min-width: ${({ theme }) => `${theme.breakpoints.Tablet}px`}) {
-    grid-column: 6/11;
-  }
-`;
-
 export const MusicProjectWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -207,4 +112,8 @@ export const MusicProjectWrapper = styled.div`
   }
 `;
 
-export const Jamie = styled(Canvas)``;
+export const CanvasWrapper = styled.div`
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+`;

@@ -1,52 +1,50 @@
-import React from "react";
+import React, { Suspense, useRef, useState } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { PageWrapper } from "../components/PageWrapper";
 import {
   H2,
-  CodeCircleDiv,
-  MusicCircleDiv,
-  CodeWrapper,
-  Project,
-  ProjectTitle,
-  ProjectDescription,
-  ProjectTechnologies,
   MusicWrapper,
-  CodeProjectWrapper,
   MusicProjectWrapper,
-  Jamie,
+  CanvasWrapper,
 } from "../styles/index.styled";
+import Smiley from "../components/Smiley";
+
+function Box(props) {
+  // This reference will give us direct access to the THREE.Mesh object
+  const ref = useRef();
+  // Set up state for the hovered and active state
+  const [hovered, setHover] = useState(false);
+  const [active, setActive] = useState(false);
+  // Subscribe this component to the render-loop, rotate the mesh every frame
+  useFrame((state, delta) => (ref.current.rotation.x += 0.01));
+  // Return the view, these are regular Threejs elements expressed in JSX
+  return (
+    <mesh
+      {...props}
+      ref={ref}
+      scale={active ? 1.5 : 1}
+      onClick={(event) => setActive(!active)}
+      onPointerOver={(event) => setHover(true)}
+      onPointerOut={(event) => setHover(false)}
+    >
+      <boxGeometry args={[1, 1, 1]} />
+      <meshStandardMaterial color={hovered ? "hotpink" : "orange"} />
+    </mesh>
+  );
+}
 
 const IndexPage = () => (
   <PageWrapper>
-    {/* <Jamie /> */}
-    <CodeWrapper id="code">
-      <CodeCircleDiv />
-      <CodeProjectWrapper>
-        <H2>Latest Projects</H2>
-        <Project>
-          <ProjectTitle>jamieguerreroportfolio</ProjectTitle>
-          <ProjectDescription>Website I built for myself 👌🏽</ProjectDescription>
-          <ProjectTechnologies>
-            Gatsby, React, ThreeJS, GSAP, Netlify
-          </ProjectTechnologies>
-        </Project>
-        <Project>
-          <ProjectTitle>Project 2</ProjectTitle>
-          <ProjectDescription>Website I built for myself 👌🏽</ProjectDescription>
-          <ProjectTechnologies>
-            Gatsby, React, ThreeJS, GSAP, Netlify
-          </ProjectTechnologies>
-        </Project>
-        <Project>
-          <ProjectTitle>Project 3</ProjectTitle>
-          <ProjectDescription>Website I built for myself 👌🏽</ProjectDescription>
-          <ProjectTechnologies>
-            Gatsby, React, ThreeJS, GSAP, Netlify
-          </ProjectTechnologies>
-        </Project>
-      </CodeProjectWrapper>
-      <Project />
-      <Project />
-    </CodeWrapper>
+    <CanvasWrapper>
+      <Canvas camera={{ position: [0, 0, 70] }}>
+        <ambientLight />
+        <pointLight position={[10, 10, 10]} />
+        <Box position={[1.2, 0, 0]} />
+        <Suspense fallback={null}>
+          <Smiley scale={0.15} />
+        </Suspense>
+      </Canvas>
+    </CanvasWrapper>
     <MusicWrapper id="music">
       <MusicProjectWrapper>
         <H2>What I'm Listening To</H2>
@@ -59,7 +57,6 @@ const IndexPage = () => (
         bluffs ting
         https://open.spotify.com/playlist/66KQJb6pC49SOZ1oAW7oOX?si=1140bb79ed6841eb
       </MusicProjectWrapper>
-      <MusicCircleDiv />
     </MusicWrapper>
   </PageWrapper>
 );

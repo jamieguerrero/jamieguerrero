@@ -48,10 +48,7 @@ export default function Navigation() {
       </HeaderTitle>
       <Menu>
         <MenuItem>
-          <Link href="/#code">code</Link>
-        </MenuItem>
-        <MenuItem>
-          <Link href="/#music">music</Link>
+          <Link href="/">home</Link>
         </MenuItem>
         <MenuItem>
           <Link href="/resume">resume</Link>
