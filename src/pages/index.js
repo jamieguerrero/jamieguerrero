@@ -1,64 +1,101 @@
-import React, { Suspense, useRef, useState } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { PageWrapper } from "../components/PageWrapper";
-import {
-  H2,
-  MusicWrapper,
-  MusicProjectWrapper,
-  CanvasWrapper,
-} from "../styles/index.styled";
-import Smiley from "../components/Smiley";
+import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
+import styled, { ThemeProvider } from "styled-components";
+import theme from "../theme";
+import GlobalStyle from "../theme/GlobalStyle";
+import Grid from "./index.styled";
 
-function Box(props) {
-  // This reference will give us direct access to the THREE.Mesh object
-  const ref = useRef();
-  // Set up state for the hovered and active state
-  const [hovered, setHover] = useState(false);
-  const [active, setActive] = useState(false);
-  // Subscribe this component to the render-loop, rotate the mesh every frame
-  useFrame((state, delta) => (ref.current.rotation.x += 0.01));
-  // Return the view, these are regular Threejs elements expressed in JSX
+const PageWrapper = styled.div`
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Courier New", Courier, monospace;
+`;
+
+const NavigationBar = styled.div``;
+const H1 = styled.h1``;
+const H2 = styled.h2``;
+
+const Menu = styled.ul``;
+const MenuItem = styled.li``;
+const Link = styled.a``;
+
+const CodeWrapper = styled.div``;
+
+const Project = styled.div``;
+const ProjectTitle = styled.p``;
+const ProjectDescription = styled.p``;
+const ProjectTechnologies = styled.p``;
+
+const AnimationWrapper = styled.div``;
+const MusicWrapper = styled.div``;
+
+const A = styled.a`
+  text-decoration: none;
+  font-size: 70px;
+  color: black;
+`;
+
+const IndexPage = () => {
+  const titles = ["Hi, I'm Jamie Guerrero ✌🏼", "It's nice to meet you!"];
+  const [titleIndex, setTitleIndex] = useState(0);
+  useEffect(() => {
+    setTimeout(() => setTitleIndex((i) => (i === 0 ? 1 : 0)), 3000);
+  }, [titleIndex]);
+
   return (
-    <mesh
-      {...props}
-      ref={ref}
-      scale={active ? 1.5 : 1}
-      onClick={(event) => setActive(!active)}
-      onPointerOver={(event) => setHover(true)}
-      onPointerOut={(event) => setHover(false)}
-    >
-      <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={hovered ? "hotpink" : "orange"} />
-    </mesh>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{titles[titleIndex]}</title>
+        <link rel="canonical" href="http://www.jamieguerrero.com" />
+      </Helmet>
+      <Grid>
+        <PageWrapper>
+          {/* <NavigationBar>
+            <H1>Jamie Guerrero</H1>
+            <Menu>
+              <MenuItem>
+                <Link href="#code">code</Link>
+              </MenuItem>
+              <MenuItem>
+                <Link href="#animation">animation</Link>
+              </MenuItem>
+              <MenuItem>
+                <Link href="#music">music</Link>
+              </MenuItem>
+            </Menu>
+          </NavigationBar>
+          <CodeWrapper id="code">
+            <H2>Projects</H2>
+            <Project>
+              <ProjectTitle>jamieguerreroportfolio</ProjectTitle>
+              <ProjectDescription>
+                Website I built for myself 👌🏽
+              </ProjectDescription>
+              <ProjectTechnologies>
+                Gatsby, React, ThreeJS, GSAP, Netlify
+              </ProjectTechnologies>
+            </Project>
+            <Project />
+            <Project />
+          </CodeWrapper>
+          <AnimationWrapper id="animation">
+            <H2>My Doodles</H2>
+          </AnimationWrapper>
+          <MusicWrapper id="music">
+            <H2>What I'm Listening To</H2>
+          </MusicWrapper> */}
+          <H1>
+            <A href="https://github.com/jamieguerrero">brb ✌🏼</A>
+          </H1>
+        </PageWrapper>
+      </Grid>
+    </ThemeProvider>
   );
-}
-
-const IndexPage = () => (
-  <PageWrapper>
-    <CanvasWrapper>
-      <Canvas camera={{ position: [0, 0, 70] }}>
-        <ambientLight />
-        <pointLight position={[10, 10, 10]} />
-        <Box position={[1.2, 0, 0]} />
-        <Suspense fallback={null}>
-          <Smiley scale={0.15} />
-        </Suspense>
-      </Canvas>
-    </CanvasWrapper>
-    <MusicWrapper id="music">
-      <MusicProjectWrapper>
-        <H2>What I'm Listening To</H2>
-        beat tapes
-        https://open.spotify.com/playlist/7Fil9eRQDLT8aiFvqrjiur?si=edd80eeca11d4403
-        feel these ones in my heart
-        https://open.spotify.com/playlist/3tkCuefAHyEC1HJv8ZX9Yk?si=796be0ecee25421d
-        🗣 cover these
-        https://open.spotify.com/playlist/2sPVqA5fBCcHjPgSxoWRXS?si=7364362fbc614efe
-        bluffs ting
-        https://open.spotify.com/playlist/66KQJb6pC49SOZ1oAW7oOX?si=1140bb79ed6841eb
-      </MusicProjectWrapper>
-    </MusicWrapper>
-  </PageWrapper>
-);
+};
 
 export default IndexPage;
