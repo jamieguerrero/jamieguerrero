@@ -51,7 +51,7 @@ export default function Navigation() {
           <Link href="/">home</Link>
         </MenuItem>
         <MenuItem>
-          <Link href="/resume">resume</Link>
+          <Link href="/art">art</Link>
         </MenuItem>
       </Menu>
     </NavigationBar>
