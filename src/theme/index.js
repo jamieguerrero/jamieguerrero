@@ -2,7 +2,7 @@ import { css } from "styled-components";
 
 const typography = {
   H1: css`
-    font-family: "Rubik-Bold";
+    font-family: "Rubik-Bold", arial;
     font-size: 36px;
     line-height: 1;
     letter-spacing: 1.71px;
@@ -10,7 +10,7 @@ const typography = {
     white-space: pre;
   `,
   H2: css`
-    font-family: "Rubik-Bold";
+    font-family: "Rubik-Bold", arial;
     font-size: 21px;
     line-height: 1;
     letter-spacing: 1px;
@@ -18,7 +18,7 @@ const typography = {
     white-space: pre;
   `,
   H3: css`
-    font-family: "Rubik-SemiBold";
+    font-family: "Rubik-SemiBold", arial;
     font-size: 1rem;
     line-height: 1;
     letter-spacing: 0.86px;
@@ -26,7 +26,7 @@ const typography = {
     white-space: pre;
   `,
   ExtraBold: css`
-    font-family: "Rubik-ExtraBold";
+    font-family: "Rubik-ExtraBold", arial;
     font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0.67px;
@@ -34,25 +34,25 @@ const typography = {
     white-space: pre;
   `,
   Body: css`
-    font-family: "HKGrotesk-SemiBold";
+    font-family: "HKGrotesk-SemiBold", arial;
     font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0.56px;
   `,
   Strong: css`
-    font-family: "HKGrotesk-Black";
+    font-family: "HKGrotesk-Black", arial;
     font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0.56px;
   `,
   StrongItalic: css`
-    font-family: "HKGrotesk-BoldItalic";
+    font-family: "HKGrotesk-BoldItalic", arial;
     font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0.56px;
   `,
   Italic: css`
-    font-family: "HKGrotesk-SemiBoldItalic";
+    font-family: "HKGrotesk-SemiBoldItalic", arial;
     font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0.56px;
