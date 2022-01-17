@@ -1,27 +1,22 @@
 import React from "react";
-import styled, { ThemeProvider } from "styled-components";
 import PropTypes from "prop-types";
-import theme from "../../theme";
 import Head from "../Head";
-import { Grid } from "../../styles/index.styled";
 import Navigation from "../Navigation";
-import GlobalStyle from "../../theme/GlobalStyle";
-
-export const InnerPageWrapper = styled.div`
-  grid-column: 2/12;
-`;
+import * as styles from "./index.module.scss";
+import { Grid } from "../Grid";
+import Footer from "../Footer";
 
 export const PageWrapper = ({ children }) => (
-  <ThemeProvider theme={theme}>
-    <GlobalStyle />
+  <>
     <Head />
     <Grid>
-      <InnerPageWrapper>
+      <div className={styles.InnerPageWrapper}>
         <Navigation />
         {children}
-      </InnerPageWrapper>
+      </div>
     </Grid>
-  </ThemeProvider>
+    <Footer />
+  </>
 );
 
 PageWrapper.propTypes = {

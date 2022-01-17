@@ -1,0 +1,21 @@
+.FooterWrapper {
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-column: -1/1;
+  height: 30rem;
+  background-color: grey;
+  color: white;
+}
+
+.Socials {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.SocialItem {
+  list-style: none;
+}

@@ -1,59 +1,21 @@
+import { Link } from "gatsby";
 import React from "react";
-import styled from "styled-components";
-import { Link } from "../../styles/index.styled";
-
-const NavigationBar = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-
-  @media (min-width: ${({ theme }) => `${theme.breakpoints.Desktop}px`}) {
-    flex-direction: row;
-  }
-`;
-
-const HeaderTitle = styled.h1`
-  ${({ theme }) => theme.typography.H1};
-  white-space: pre;
-
-  a {
-    color: black;
-    text-decoration: none;
-  }
-`;
-
-const Menu = styled.ul`
-  margin: 0.5rem 0;
-  padding: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  list-style: none;
-  justify-content: space-around;
-  height: 2em;
-
-  @media (min-width: ${({ theme }) => `${theme.breakpoints.Tablet}px`}) {
-    width: 50%;
-  }
-`;
-const MenuItem = styled.li``;
+import * as styles from "./index.module.scss";
 
 export default function Navigation() {
   return (
-    <NavigationBar>
-      <HeaderTitle>
-        <a href="/">JAMIE GUERRERO</a>
-      </HeaderTitle>
-      <Menu>
-        <MenuItem>
-          <Link href="/">home</Link>
-        </MenuItem>
-        <MenuItem>
-          <Link href="/art">art</Link>
-        </MenuItem>
-      </Menu>
-    </NavigationBar>
+    <div className={styles.NavigationBar}>
+      <h1 className={styles.HeaderTitle}>
+        <Link to="/">JAMIE GUERRERO</Link>
+      </h1>
+      <ul className={styles.Menu}>
+        <li>
+          <Link to="/">home</Link>
+        </li>
+        <li>
+          <Link to="/art">art</Link>
+        </li>
+      </ul>
+    </div>
   );
 }

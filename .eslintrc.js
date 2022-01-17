@@ -10,12 +10,18 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: "module",
   },
-  plugins: ["react"],
+  plugins: ["react", "css-modules"],
   rules: {
     "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
     "import/prefer-default-export": 1,
     "no-return-assign": 0,
     "react/jsx-props-no-spreading": 0,
   },
-  extends: ["plugin:react/recommended", "airbnb", "prettier", "react-app"],
+  extends: [
+    "plugin:react/recommended",
+    "airbnb",
+    "prettier",
+    "react-app",
+    "plugin:css-modules/recommended",
+  ],
 };

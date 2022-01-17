@@ -1,0 +1,15 @@
+@use "../styles/variables";
+@import "../fonts/fonts.scss";
+
+body {
+  margin: 0;
+  font-family: "HKGrotesk-SemiBold";
+  letter-spacing: 0.56px;
+  font-size: 16px;
+}
+
+@media (min-width: variables.$breakpoint-tablet) {
+  body {
+    font-size: 18px;
+  }
+}

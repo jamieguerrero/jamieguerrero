@@ -17,5 +17,7 @@ module.exports = {
     "gatsby-plugin-styled-components",
     "gatsby-plugin-gatsby-cloud",
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-transition-link`,
+    `gatsby-plugin-sass`,
   ],
 };

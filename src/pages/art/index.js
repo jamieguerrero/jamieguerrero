@@ -1,26 +1,15 @@
 import React from "react";
-import styled, { ThemeProvider } from "styled-components";
-import Head from "../../components/Head";
-import Navigation from "../../components/Navigation";
-import theme from "../../theme";
-import GlobalStyle from "../../theme/GlobalStyle";
 import HelloP5 from "./HelloP5";
-
-const ArtWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-`;
+import { PageWrapper } from "../../components/PageWrapper";
+import * as styles from "./index.module.scss";
 
 function ArtPage() {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Head />
-      <Navigation />
-      <ArtWrapper>
+    <PageWrapper>
+      <div className={styles.ArtWrapper}>
         <HelloP5 />
-      </ArtWrapper>
-    </ThemeProvider>
+      </div>
+    </PageWrapper>
   );
 }
 
