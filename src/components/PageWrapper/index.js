@@ -7,7 +7,7 @@ import { Grid } from "../Grid";
 import Footer from "../Footer";
 
 export const PageWrapper = ({ children }) => (
-  <>
+  <div>
     <Head />
     <Grid>
       <div className={styles.InnerPageWrapper}>
@@ -16,7 +16,7 @@ export const PageWrapper = ({ children }) => (
       </div>
     </Grid>
     <Footer />
-  </>
+  </div>
 );
 
 PageWrapper.propTypes = {
