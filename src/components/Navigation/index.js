@@ -6,14 +6,17 @@ export default function Navigation() {
   return (
     <div className={styles.NavigationBar}>
       <h1 className={styles.HeaderTitle}>
-        <Link to="/">JAMIE GUERRERO</Link>
+        <Link to="/">jamie guerrero</Link>
       </h1>
       <ul className={styles.Menu}>
         <li>
-          <Link to="/">home</Link>
+          <Link to="/">code</Link>
         </li>
         <li>
           <Link to="/art">art</Link>
+        </li>
+        <li>
+          <Link to="/music">music</Link>
         </li>
         <li>
           <Link to="/blog">blog</Link>

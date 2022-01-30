@@ -10,7 +10,8 @@ function BlogPage({ data }) {
   return (
     <PageWrapper>
       <div className={styles.BlogWrapper}>
-        <h1>Blog</h1>
+        <h1>blog</h1>
+        <p>sometimes i blog</p>
         <ul>
           {data?.allHashNodePost?.edges?.map(({ node: blogPost }) => (
             <li key={blogPost.cuid}>

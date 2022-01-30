@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 
 export default function Head() {
-  const titles = ["Hi, I'm Jamie Guerrero ✌🏼", "It's nice to meet you!"];
+  const titles = ["hi, i'm jamie guerrero ✌🏼", "it's nice to meet you!"];
   const [titleIndex, setTitleIndex] = useState(0);
   useEffect(() => {
     const timer = setTimeout(
