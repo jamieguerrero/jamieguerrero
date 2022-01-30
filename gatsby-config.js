@@ -14,6 +14,12 @@ module.exports = {
         apiToken: process.env.DATO_API_TOKEN,
       },
     },
+    {
+      resolve: "gatsby-source-hashnode",
+      options: {
+        username: "Guerrero",
+      },
+    },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-gatsby-cloud",
     `gatsby-plugin-react-helmet`,

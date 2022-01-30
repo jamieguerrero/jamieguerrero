@@ -15,6 +15,9 @@ export default function Navigation() {
         <li>
           <Link to="/art">art</Link>
         </li>
+        <li>
+          <Link to="/blog">blog</Link>
+        </li>
       </ul>
     </div>
   );
