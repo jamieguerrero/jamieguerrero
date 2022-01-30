@@ -6,18 +6,20 @@ import * as styles from "./index.module.scss";
 import { Grid } from "../Grid";
 import Footer from "../Footer";
 
-export const PageWrapper = ({ children }) => (
-  <div>
-    <Head />
-    <Grid>
-      <div className={styles.InnerPageWrapper}>
-        <Navigation />
-        {children}
-      </div>
-    </Grid>
-    <Footer />
-  </div>
-);
+export default function PageWrapper({ children }) {
+  return (
+    <div className={styles.PageWrapper}>
+      <Head />
+      <Grid>
+        <div className={styles.InnerPageWrapper}>
+          <Navigation />
+          {children}
+        </div>
+      </Grid>
+      <Footer className={styles.Footer} />
+    </div>
+  );
+}
 
 PageWrapper.propTypes = {
   children: PropTypes.node.isRequired,

@@ -1,3 +1,13 @@
+.PageWrapper {
+  position: relative;
+  min-height: 100vh;
+}
 .InnerPageWrapper {
   grid-column: 2/12;
+  min-height: 100vh;
+}
+
+.Footer {
+  bottom: 0;
+  width: 100vw;
 }

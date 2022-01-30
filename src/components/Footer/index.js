@@ -1,9 +1,9 @@
 import React from "react";
 import * as styles from "./index.module.scss";
 
-export default function Footer() {
+export default function Footer({ className }) {
   return (
-    <div className={styles.FooterWrapper}>
+    <div className={`${className} ${styles.FooterWrapper}`}>
       <div className={styles.Socials}>
         <div className={styles.SocialItem}>
           <a href="/">instagram</a>
