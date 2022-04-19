@@ -1,21 +1,37 @@
-@use "../styles/variables";
-@import "../fonts/fonts.scss";
-@import "./typography.scss";
+@import "./fonts/index.scss";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  font-family: "PPNeueMontreal-Medium";
-  letter-spacing: 0.56px;
-  font-size: 16px;
-  background-color: #ced7cb;
-}
+@layer base {
+  html {
+    font-family: "PPNeueMontreal-Medium";
+  }
+  h1,
+  h2 {
+    font-family: "PPNeueMontreal-Bold";
+  }
 
-@media (min-width: variables.$breakpoint-tablet) {
-  body {
-    font-size: 18px;
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 33px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  nav > a {
+    font-family: "PPNeueMontreal-Bold";
+    font-size: 21px;
+    text-decoration: none;
   }
 }

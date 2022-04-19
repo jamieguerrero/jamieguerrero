@@ -3,27 +3,19 @@ import React from "react";
 
 export function Navigation() {
   return (
-    <div>
-      <h1>
-        <Link to="/">jamie guerrero</Link>
+    <div className="grid grid-cols-12 h-40 content-center">
+      <h1 className="col-start-2 col-end-7">
+        <Link className="no-underline" to="/">
+          jamie guerrero
+        </Link>
       </h1>
-      <ul>
-        <li>
-          <Link to="/">code</Link>
-        </li>
-        <li>
-          <Link to="#art">art</Link>
-        </li>
-        <li>
-          <Link to="#music">music</Link>
-        </li>
-        <li>
-          <Link to="/blog">blog</Link>
-        </li>
-        <li>
-          <Link to="/about">about</Link>
-        </li>
-      </ul>
+      {/* <nav className="flex col-start-7 col-end-12 justify-between items-center">
+        <Link to="/">code</Link>
+        <Link to="#art">art</Link>
+        <Link to="#music">music</Link>
+        <Link to="/blog">blog</Link>
+        <Link to="/about">about</Link>
+      </nav> */}
     </div>
   );
 }

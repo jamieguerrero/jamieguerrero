@@ -6,9 +6,9 @@ import { Navigation } from "../Navigation";
 
 export function PageWrapper({ children }) {
   return (
-    <div>
+    <div className="bg-emerald-50 ">
       <Head />
-      <div>
+      <div className="flex flex-col h-screen">
         <Navigation />
         {children}
       </div>
