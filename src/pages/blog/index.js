@@ -1,7 +1,6 @@
 import { graphql } from "gatsby";
 import React from "react";
-import PageWrapper from "../../components/PageWrapper";
-import * as styles from "./index.module.scss";
+import { PageWrapper } from "../../components";
 
 const blogURL = "https://jamieguerrero.hashnode.dev";
 
@@ -9,7 +8,7 @@ function BlogPage({ data }) {
   if (!data?.allHashNodePost?.edges) return null;
   return (
     <PageWrapper>
-      <div className={styles.BlogWrapper}>
+      <div>
         <h1>blog</h1>
         <p>sometimes i blog</p>
         <ul>

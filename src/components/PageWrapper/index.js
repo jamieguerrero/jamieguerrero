@@ -1,22 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Head from "../Head";
-import Navigation from "../Navigation";
-import * as styles from "./index.module.scss";
-import { Grid } from "../Grid";
-import Footer from "../Footer";
 
-export default function PageWrapper({ children }) {
+import { Head } from "../Head";
+import { Navigation } from "../Navigation";
+
+export function PageWrapper({ children }) {
   return (
-    <div className={styles.PageWrapper}>
+    <div>
       <Head />
-      <Grid>
-        <div className={styles.InnerPageWrapper}>
-          <Navigation />
-          {children}
-        </div>
-      </Grid>
-      <Footer className={styles.Footer} />
+      <div>
+        <Navigation />
+        {children}
+      </div>
     </div>
   );
 }

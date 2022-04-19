@@ -2,7 +2,7 @@
 import React from "react";
 import p5 from "p5";
 
-export default class P5 extends React.Component {
+export class P5 extends React.Component {
   constructor(props) {
     super(props);
     this.sketchRef = React.createRef();

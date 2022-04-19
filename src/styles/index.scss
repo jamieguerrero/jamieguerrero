@@ -1,11 +1,17 @@
 @use "../styles/variables";
 @import "../fonts/fonts.scss";
+@import "./typography.scss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
   margin: 0;
-  font-family: "HKGrotesk-SemiBold";
+  font-family: "PPNeueMontreal-Medium";
   letter-spacing: 0.56px;
   font-size: 16px;
+  background-color: #ced7cb;
 }
 
 @media (min-width: variables.$breakpoint-tablet) {

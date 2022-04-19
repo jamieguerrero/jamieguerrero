@@ -13,9 +13,11 @@ module.exports = {
   plugins: ["react", "css-modules"],
   rules: {
     "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
-    "import/prefer-default-export": 1,
     "no-return-assign": 0,
+    "import/prefer-default-export": 0,
     "react/jsx-props-no-spreading": 0,
+    "global-require": 0,
+    "import/extensions": 0,
   },
   extends: [
     "plugin:react/recommended",

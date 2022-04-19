@@ -1,25 +1,27 @@
 import { Link } from "gatsby";
 import React from "react";
-import * as styles from "./index.module.scss";
 
-export default function Navigation() {
+export function Navigation() {
   return (
-    <div className={styles.NavigationBar}>
-      <h1 className={styles.HeaderTitle}>
+    <div>
+      <h1>
         <Link to="/">jamie guerrero</Link>
       </h1>
-      <ul className={styles.Menu}>
+      <ul>
         <li>
           <Link to="/">code</Link>
         </li>
         <li>
-          <Link to="/art">art</Link>
+          <Link to="#art">art</Link>
         </li>
         <li>
-          <Link to="/music">music</Link>
+          <Link to="#music">music</Link>
         </li>
         <li>
           <Link to="/blog">blog</Link>
+        </li>
+        <li>
+          <Link to="/about">about</Link>
         </li>
       </ul>
     </div>
