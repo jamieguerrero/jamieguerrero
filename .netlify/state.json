@@ -1,0 +1,17 @@
+{
+	"siteId": "da5f29ed-da96-44a1-831c-8b8579c02cc1",
+	"geolocation": {
+		"data": {
+			"city": "Toronto",
+			"country": {
+				"code": "CA",
+				"name": "Canada"
+			},
+			"subdivision": {
+				"code": "ON",
+				"name": "Ontario"
+			}
+		},
+		"timestamp": 1654740856035
+	}
+}

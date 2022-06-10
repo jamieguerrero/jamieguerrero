@@ -1,2 +1,6 @@
-# Ignore artifacts:                                                                                                        jamieguerrero : master* 
-build
+/.cache
+/.github
+/.netlify
+/.vscode
+/node_modules
+/public
