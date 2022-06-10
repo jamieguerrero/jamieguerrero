@@ -9,7 +9,7 @@ export const links: LinksFunction = () => {
 export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1>oh shit this is gonna be fun</h1>
+      <h1>oh shit this is gonna be fun!</h1>
     </div>
   );
 }

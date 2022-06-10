@@ -17089,12 +17089,12 @@ var links2 = () => {
 function Index2() {
   return /* @__PURE__ */ React.createElement("div", {
     style: { fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }
-  }, /* @__PURE__ */ React.createElement("h1", null, "oh shit this is gonna be fun"));
+  }, /* @__PURE__ */ React.createElement("h1", null, "oh shit this is gonna be fun!"));
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
 init_react();
-var assets_manifest_default = { "version": "aaeb8b4f", "entry": { "module": "/build/entry.client-MPZOSVNI.js", "imports": ["/build/_shared/chunk-VQ53OORO.js", "/build/_shared/chunk-KDLP5LGO.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-L35LPD5G.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-D7BGWOIE.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/op1/index": { "id": "routes/op1/index", "parentId": "root", "path": "op1", "index": true, "caseSensitive": void 0, "module": "/build/routes/op1/index-3WN3FRAJ.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-AAEB8B4F.js" };
+var assets_manifest_default = { "version": "5ba03b2d", "entry": { "module": "/build/entry.client-MPZOSVNI.js", "imports": ["/build/_shared/chunk-VQ53OORO.js", "/build/_shared/chunk-KDLP5LGO.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-L35LPD5G.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-E55XG5IK.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/op1/index": { "id": "routes/op1/index", "parentId": "root", "path": "op1", "index": true, "caseSensitive": void 0, "module": "/build/routes/op1/index-3WN3FRAJ.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-5BA03B2D.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var entry = { module: entry_server_exports };
