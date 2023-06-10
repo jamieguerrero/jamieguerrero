@@ -20,7 +20,7 @@
     "@react-three/fiber": "^7.0.6",
     "babel-plugin-styled-components": "^1.13.1",
     "dotenv": "^8.6.0",
-    "gatsby": "^3.8.1",
+    "gatsby": "^4.25.7",
     "gatsby-plugin-gatsby-cloud": "^2.8.1",
     "gatsby-plugin-react-helmet": "^4.9.0",
     "gatsby-plugin-styled-components": "^4.8.0",
